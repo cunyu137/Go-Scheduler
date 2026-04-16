@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+mysql:
+  dsn: root:root@tcp(127.0.0.1:3307)/scheduler_v2?charset=utf8mb4&parseTime=True&loc=Local
+
+scheduler:
+  task_scan_interval_seconds: 1
+  instance_scan_interval_seconds: 1
+  batch_size: 50
+  worker_alive_seconds: 15
+  dispatch_timeout_seconds: 5

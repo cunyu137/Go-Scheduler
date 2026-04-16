@@ -1,0 +1,17 @@
+worker:
+  id: worker-1
+  address: http://127.0.0.1:8090
+  port: 8090
+  heartbeat_interval_seconds: 5
+
+admin:
+  base_url: http://127.0.0.1:8080
+
+mysql:
+  dsn: root:root@tcp(127.0.0.1:3307)/scheduler_v2?charset=utf8mb4&parseTime=True&loc=Local
+
+redis:
+  addr: 127.0.0.1:6379
+  password: ""
+  db: 0
+  idempotent_key_ttl_seconds: 300
