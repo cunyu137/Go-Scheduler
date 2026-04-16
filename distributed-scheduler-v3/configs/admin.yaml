@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+mysql:
+  dsn: root:root@tcp(127.0.0.1:3308)/scheduler_v3?charset=utf8mb4&parseTime=True&loc=Local
+
+redis:
+  addr: 127.0.0.1:6380
+  password: ""
+  db: 0
+
+scheduler:
+  task_scan_interval_seconds: 2
+  instance_scan_interval_seconds: 2
+  worker_scan_interval_seconds: 5
+  batch_size: 50
+  worker_alive_seconds: 15
+  dispatch_timeout_seconds: 3
+  reclaim_running_timeout_seconds: 20
+
+leader:
+  lock_name: distributed_scheduler_v3_leader
+  renew_interval_seconds: 2
