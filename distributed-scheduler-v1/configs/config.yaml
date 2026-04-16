@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+mysql:
+  dsn: root:root@tcp(127.0.0.1:3307)/scheduler?charset=utf8mb4&parseTime=True&loc=Local
+
+redis:
+  addr: 127.0.0.1:6379
+  password: ""
+  db: 0
+
+scheduler:
+  task_scan_interval_seconds: 1
+  instance_scan_interval_seconds: 1
+  batch_size: 50
+  idempotent_key_ttl_seconds: 3600
